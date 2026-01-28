@@ -90,6 +90,7 @@ router.post('/verify-code', async (req, res) => {
 // Sign In Route
 router.post('/signin', async (req, res) => {
     const {email, password, captchaToken} = req.body;
+    console.log(email);
     if (!captchaToken) {
         return res.status(400).json({message: "Captcha required"});
     }
